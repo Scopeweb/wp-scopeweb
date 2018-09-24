@@ -1,0 +1,128 @@
+{% block html_head_container %}
+
+    {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
+</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+<!-- Preloader Start -->
+<div id="preloader">
+    <div id="preloader-status"></div>
+</div>
+<!-- Preloader End -->
+<!-- Header Start -->
+<header>
+    <div class="header-top">
+        {% block header %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-7">
+                        <div class="header-left">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-envelope-o"></i>hello@scopeweb.nyc</li>
+                                <li>
+                                    <i class="fa fa-phone"></i>call us: +1 570 580 7737</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <div class="social-appoitment-button">
+                            <div class="header-right-div">
+                                <div class="soical-profile">
+                                    <ul>
+                                        <li>
+                                            <a href="https://facebook.com/scopeweb" target="_blank">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/scopewebnyc" target="_blank">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://instagram.com/scopeweb" target="_blank">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://dribbble.com/scopeweb" target="_blank">
+                                                <i class="fa fa-dribbble"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="appoitment-button">
+                                <a href="#">Get A Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Start -->
+        <div class="hd-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-8">
+                        <div class="logo">
+                            <a href="{{site.url}}"><img src="{{ site.theme.path}}/img/logo.png" alt=""/></a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-menu"></div>
+                    <div class="col-md-6 col-sm-9">
+                        <div class="menu">
+                            <nav id="main-menu" class="main-menu">
+                                {% include "menu.twig" with {
+                                    'menu' : menu.get_items
+                                } %}
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="search-button">
+                            <form method="get" role="search" action="{{ site.url }}">
+                                <input type="hidden" name="post_type" value="post">
+                                <input placeholder="Search Here...." name="s" type="text">
+                                <input type="hidden" name="post_type" value="post">
+                                <button type="submit" value="Search">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    <!-- Header End -->
+</header>
+<!-- Header End -->
+
+<section id="content" role="main" class="content-wrapper">
+    {% if title %}
+        <h1>{{title}}</h1>
+    {% endif %}
+    <div class="wrapper {{sidebar_class}}">
+        {% block content %}
+            Sorry, no content
+        {% endblock %}
+    </div>
+    {% if sidebar %}
+        <aside class="layout-sidebar">
+            {{sidebar}}
+        </aside>
+    {% endif %}
+</section>
+
+{% block footer %}
+    <footer id="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}
+</body>
+</html>
