@@ -6,14 +6,20 @@
 {% endblock %}
 
 <body class="{{body_class}}" data-template="base.twig">
-{# <a class="skip-link screen-reader-text" href="#page-content">{{ _e( 'Skip to content') }}</a> #}
+{# <a class="skip-link screen-reader-text" href="#page-content">{{ _e( 'Skip to content') }}</a #}
+<div class="text-light show-logo" id="page-loader">
+    <span class="loader-icon bullets-jump">
+        <span></span>
+        <span></span>
+        <span></span></span>
+</div>
 <div id="page-content">
     <header class="header-left" id="header">
         {% block header %}
             <div class="header-inner clearfix">
                 <div class="logo-left text-light" id="logo">
-                    <a href="index.html"><img alt="Logo Dark" id="dark-logo" src="assets/uploads/logo-scopeweb-dark.png" srcset="assets/uploads/logo-scopeweb-dark.png 1x, assets/uploads/logo-scopeweb-dark@2x.png 2x">
-                        <img alt="Logo Light" id="light-logo" src="assets/uploads/logo-scopeweb-light.png" srcset="assets/uploads/logo-scopeweb-light.png 1x, assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
+                    <a href="{{ site.link }}"><img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-dark@2x.png 2x">
+                        <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
                 </div>
                 <div class="clearfix" id="menu">
                     <div class="menu-actions">
@@ -63,27 +69,29 @@
             </div>
             <span class="pseudo-close header-close"></span>
             <!-- #nav -->
-    {% endblock %}
-</header>
-
-<section id="content" role="main" class="content-wrapper">
-    {% if title %}
-        <h1>{{title}}</h1>
-    {% endif %}
-    <div class="wrapper {{sidebar_class}}">
-        {% block content %}
-            Sorry, no content
         {% endblock %}
-    </div>
-    {% if sidebar %}
-        <aside class="layout-sidebar">
-            {{sidebar}}
-        </aside>
-    {% endif %}
-</section>
+    </header>
+
+    <section id="content">
+        {% if title %}
+            <h1>{{title}}</h1>
+        {% endif %}
+        <div class="{{sidebar_class}}">
+            {% block content %}
+                Sorry, no content
+            {% endblock %}
+        </div>
+        {% if sidebar %}
+            <aside class="layout-sidebar">
+                {{sidebar}}
+            </aside>
+        {% endif %}
+    </section>
+</div>
 
 {% block footer %}
-    <footer id="footer">
+    <footer class="text-light" id="footer">
+        <!-- footer id is defined here, now go into footer.twig -->
         {% include 'footer.twig' %}
     </footer>
     {{ function('wp_footer') }}

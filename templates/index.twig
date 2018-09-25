@@ -1,11 +1,204 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{ foo }}</h2>
-	<p>{{ qux }}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-	
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+    <div id="hero-and-body">
+        <section class="hero-auto" id="hero">
+            <div class="revolution-slider-wrapper">
+                <div class="revolution-slider" data-version="5.0" id="revolutionslider1">
+                    <ul>
+                        <li class="text-light" data-masterspeed="400" data-transition="fade">
+                            <img alt="SEO" height="1158" src="{{ site.theme.path }}/assets/uploads/hero-slider-1.jpg" width="1920">
+                            <div class="tp-caption scopeweb-caption align-center" data-basealign="slide" data-fontsize="['52','44','32','22']" data-frames='[{"delay":300,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":400,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-height="auto" data-hoffset="['50','40','30','30']" data-lineheight="['74','66','46','36']" data-responsive_offset="on" data-start="1000" data-voffset="0" data-whitespace="['normal','normal','normal','normal']" data-width="['700', '600', '440', '260']" data-x="left" data-y="center">
+                                Hi. We are Scope Web.
+                                <br/>
+                                An award-winning web development &amp; design agency from NYC
+                            </div>
+                        </li>
+                        <li class="text-light" data-masterspeed="400" data-transition="fade">
+                            <img alt="SEO" height="1300" src="{{ site.theme.path }}/assets/uploads/hero-slider-2.jpg" width="1920">
+                            <div class="tp-caption scopeweb-caption align-center" data-basealign="slide" data-fontsize="['52','44','32','22']" data-frames='[{"delay":300,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":400,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-height="auto" data-hoffset="['50','40','30','30']" data-lineheight="['74','66','46','36']" data-responsive_offset="on" data-start="1000" data-voffset="0" data-whitespace="['normal','normal','normal','normal']" data-width="['700', '600', '440', '260']" data-x="left" data-y="center">
+                                Reimagined charity platform. Innovative geolocation driven pickups
+                            </div>
+                            <div class="tp-caption align-center" data-basealign="slide" data-height="auto" data-hoffset="['50','40','30','30']" data-responsive_offset="on" data-start="700" data-transform_idle="o:1;sX:1;sY:1" data-transform_in="o:0;s:600;sX:0.9;sY:0.9;e:Power3.easeInOut;" data-transform_out="o:0;s:300;sX:0.9;sY:0.9;" data-voffset="['140', '140', '110', '110']" data-whitespace="nowrap" data-width="auto" data-x="left" data-y="center">
+                                <a class="sr-button style-3 button-small" href="giveasy-case-study.html">View Project</a>
+                            </div>
+                        </li>
+                        <li class="text-light" data-masterspeed="400" data-transition="fade">
+                            <img alt="SEO" height="1243" src="{{ site.theme.path }}/assets/uploads/hero-slider-3.jpg" width="1920">
+                            <div class="tp-caption scopeweb-caption align-center" data-basealign="slide" data-fontsize="['52','44','32','22']" data-frames='[{"delay":300,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":400,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' data-height="auto" data-hoffset="['50','40','30','30']" data-lineheight="['74','66','46','36']" data-responsive_offset="on" data-start="1000" data-voffset="0" data-whitespace="['normal','normal','normal','normal']" data-width="['700', '600', '440', '260']" data-x="left" data-y="center">
+                                Laying a foundation for a growing home improvement business
+                            </div>
+                            <div class="tp-caption align-center" data-basealign="slide" data-height="auto" data-hoffset="['50','40','30','30']" data-responsive_offset="on" data-start="700" data-transform_idle="o:1;sX:1;sY:1" data-transform_in="o:0;s:600;sX:0.9;sY:0.9;e:Power3.easeInOut;" data-transform_out="o:0;s:300;sX:0.9;sY:0.9;" data-voffset="['140', '140', '110', '90']" data-whitespace="nowrap" data-width="auto" data-x="left" data-y="center">
+                                <a class="sr-button style-3 button-small" href="bayron-case-study.html">View Project</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="left text-light" href="#" id="scrolldown">
+                <svg class="arrow arrow-bottom" viewbox="0 0 60 35.35" xmlns="http://www.w3.org/2000/svg">
+                    <title>back-arrow</title>
+                    <path d="M0,16.88a3,3,0,0,0,.16.94,1.51,1.51,0,0,0,.63.78l15,15a2.14,2.14,0,0,0,3.52.08,2.14,2.14,0,0,0-.08-3.52L8.59,19.38H57.5a2.5,2.5,0,1,0,0-5H8.59L19.22,3.59A2.14,2.14,0,0,0,19.3.08a2.14,2.14,0,0,0-3.52.08l-15,15a1.51,1.51,0,0,0-.62.78A3,3,0,0,0,0,16.88Z"></path>
+                </svg>
+                <span class="text">Scroll Down</span></a>
+        </section>
+        <section id="page-body">
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="wrapper-small">
+                <h2 class="align-center">An award winning digital branding agency, driving sales and increasing value with exceptional websites, brand identities & campaigns.</h2>
+            </div>
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="isotope-grid portfolio-container style-column-2 clearfix text-light" id="portfolio-grid">
+                <div class="isotope-item portfolio-item double-width">
+                    <div class="portfolio-item-inner item-inner">
+                        <a class="thumb-hover scale text-light" href="portfolio-single-casestudy.html"><img alt="Ultrabse product development" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/portfolio-thumb-ultrabse.jpg" height="800" width="1920">
+                            <div class="overlay-caption bottom align-left">
+                                <span class="caption-sub portfolio-category">Product development</span>
+                                <h2 class="caption-name portfolio-name">Ultrabse</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="isotope-item portfolio-item">
+                    <div class="portfolio-item-inner item-inner">
+                        <a class="thumb-hover scale text-light" href="portfolio-single-classic.html"><img alt="GoRemote product concept" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/portfolio-thumb-goremote.jpg" height="800" width="960">
+                            <div class="overlay-caption bottom align-left">
+                                <span class="caption-sub portfolio-category">Product Concept</span>
+                                <h2 class="caption-name portfolio-name">GoRemote</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="isotope-item portfolio-item">
+                    <div class="portfolio-item-inner item-inner">
+                        <a class="thumb-hover text-light videobg-section" data-phatmp4="{{ site.theme.path }}/assets/uploads/agency.mp4" data-phatogv="" data-phatplayonhover="true" data-phatratio="21/9" data-phattype="html5" data-phatwebm="" data-rel="lightcase" href="https://www.youtube.com/embed/BsafeSHN_II"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/portfolio-thumb-agency.jpg" height="680" width="960">
+                            <div class="overlay-caption bottom align-left">
+                                <span class="caption-sub portfolio-category">About Our Agency</span>
+                                <h2 class="caption-name portfolio-name">Get to know Scope Web</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="isotope-item portfolio-item">
+                    <div class="portfolio-item-inner item-inner">
+                        <a class="thumb-hover scale text-light" href="portfolio-single-classic.html"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/portfolio-thumb-geminigassprings.jpg" height="800" width="960">
+                            <div class="overlay-caption bottom align-left">
+                                <span class="caption-sub portfolio-category">Web Design &amp; Development</span>
+                                <h2 class="caption-name portfolio-name">Gemini Gas Springs</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="isotope-item portfolio-item">
+                    <div class="portfolio-item-inner item-inner">
+                        <a class="thumb-hover scale text-light" href="portfolio-single-classic.html"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/portfolio-thumb-bayroninc.jpg" height="680" width="960">
+                            <div class="overlay-caption bottom align-left">
+                                <span class="caption-sub portfolio-category">Web Development &amp; Design</span>
+                                <h2 class="caption-name portfolio-name">Bayron Home Improvements</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="wrapper-small">
+                <h3 class="align-center">At Scope Web we imagine, plan and bring consumer internet experience to life. We provide a mixture of consulting, design and engineering.
+                </h3>
+                <div class="spacer-medium"></div>
+                <h4 class="align-center title-alt">We're proud to collaborated with great brands.</h4>
+                <div class="spacer-medium"></div>
+            </div>
+            <p class="align-center do-anim"><img alt="SEO" src="{{ site.theme.path }}/assets/uploads/example-logos-big-dark.png" srcset="{{ site.theme.path }}/assets/uploads//example-logos-big-dark.png 1x, assets/uploads/example-logos-big-dark@2x.png 2x"></p>
+            <div class="spacer-medium"></div>
+            <p class="align-center do-anim"><img alt="SEO" src="{{ site.theme.path }}/assets/uploads/example-logos-big-dark-2.png" srcset="{{ site.theme.path }}/assets/uploads//example-logos-big-dark-2.png 1x, assets/uploads/example-logos-big-dark-2@2x.png 2x"></p>
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="fullwidth-section text-light nopadding">
+                <div class="fullwidth-content">
+                    <a class="inline-lightcase" data-rel="lightcase" href="https://www.youtube.com/embed/4TBd_A7lLH8"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/inline-video-1.jpg" height="1148" width="2680"></a>
+                </div>
+            </div>
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="wrapper">
+                <h3 class="align-center">From our Blog</h3>
+                <div class="spacer-big"></div>
+                <div class="isotope-grid style-column-3 isotope-spaced-big" id="blog-grid">
+                    <div class="blog-item isotope-item">
+                        <div class="blog-item-inner item-inner">
+                            <div class="blog-media do-anim-modern">
+                                <a class="thumb-hover scale" href="blog-single-split1.html"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/blog-thumb-equal-2.jpg" height="900" width="1200"></a>
+                            </div>
+                            <div class="blog-info">
+                                <div class="post-meta clearfix">
+                                    <span class="post-date">May 8, 2017</span>
+                                    <span class="post-cat">
+                                        <a href="#">Team</a>
+                                    </span>
+                                </div>
+                                <h3 class="post-name">
+                                    <a href="blog-single-split1.html">Interview with Nathan Henniges</a>
+                                </h3>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item isotope-item">
+                        <div class="blog-item-inner item-inner">
+                            <div class="blog-media do-anim-modern">
+                                <a class="thumb-hover scale" href="blog-single-split2.html"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/blog-thumb-equal-1.jpg" height="900" width="1200"></a>
+                            </div>
+                            <div class="blog-info">
+                                <div class="post-meta clearfix">
+                                    <span class="post-date">May 6, 2017</span>
+                                    <span class="post-cat">
+                                        <a href="#">Food</a>
+                                    </span>
+                                </div>
+                                <h3 class="post-name">
+                                    <a href="blog-single-split1.html">What should I eat for Breakfast</a>
+                                </h3>
+                                <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back ...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item isotope-item">
+                        <div class="blog-item-inner item-inner">
+                            <div class="blog-media do-anim-modern">
+                                <a class="thumb-hover scale" href="blog-single-classic.html"><img alt="SEO" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/blog-thumb-equal-3.jpg" height="900" width="1200"></a>
+                            </div>
+                            <div class="blog-info">
+                                <div class="post-meta clearfix">
+                                    <span class="post-date">May 1, 2017</span>
+                                    <span class="post-cat">
+                                        <a href="#">Technology</a>
+                                    </span>
+                                </div>
+                                <h3 class="post-name">
+                                    <a href="blog-single-split1.html">What is responsive Web Design</a>
+                                </h3>
+                                <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer-big"></div>
+            <div class="spacer-big hidden-768"></div>
+            <div class="fullwidth-section text-light" style="background: #000000;">
+                <div class="fullwidth-content wrapper-small align-center">
+                    <h3 class="title-alt">Ready to start your Project?
+                        <a href="contact.html">
+                            <strong>Click here</strong>
+                        </a>
+                    </h3>
+                    <div class="spacer-small"></div>
+                    <h5 class="title-alt">... or call us at +1 570 580 7737</h5>
+                </div>
+            </div>
+        </section>
+    </div>
 {% endblock %}
