@@ -5582,3 +5582,9 @@ header #logo img {
 .mt-50 {
     margin-top: 50px;
 }
+
+.portal {
+    position: absolute;
+    bottom: 30px;
+    margin-left: 25%;
+}
