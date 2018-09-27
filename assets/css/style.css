@@ -429,7 +429,7 @@ select {
     -webkit-border-radius: 0px;
     border-radius: 2px;
     min-width: 120px;
-    background-image: url(../assets/select-arrow.png);
+    background-image: url("./assets/select-arrow.png");
     background-position: center right;
     background-repeat: no-repeat;
     -webkit-background-size: 20px 6px;
@@ -441,7 +441,7 @@ select {
 .text-light select {
     color: #ffffff;
     border-color: #fa4d5a;
-    background-image: url(../assets/select-arrow-light.png);
+    background-image: url("./assets/select-arrow-light.png");
 }
 
 select option {
