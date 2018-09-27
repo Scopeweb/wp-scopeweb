@@ -28,7 +28,7 @@
     <header class="header-left" id="header">
         {% block header %}
             <div class="header-inner clearfix">
-                {% if post.slug == 'case-studies' %}
+                {% if post.slug == 'case-studies' | function('get_post_type', post.ID) == false %}
                     <div class="logo-left text-dark" id="logo">
                         <a href="{{ site.link }}">
                             <img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png">
