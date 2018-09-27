@@ -1,39 +1,93 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
-			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<a href="{{ post.link }}">{{ _e('edit') }}</a>
-				<p class="blog-author">
-					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
-				</p>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
+    <!-- HERO & BODY -->
+    <div id="hero-and-body">
 
-			<!-- comment box -->
-			<section class="comment-box">
-				<!-- comments -->
-				<div class="comments">
-				    {% if post.comments %}
-					<h3> comments </h3>
-					{% for cmt in post.comments %}
-					    {% include "comment.twig" with {comment:cmt} %}
-					{% endfor %}
-				    {% endif %}
-				</div>
+        <!-- HERO -->
+        <section id="hero" class="hero-auto">
 
-				{% if post.comment_status == "closed" %}
-					<p> comments for this post are closed </p>
-				{% else %}
-				    <!-- comment form -->
-				    {% include "comment-form.twig" %}
-				{% endif %}
-			</section>
-		</article>
-	</div><!-- /content-wrapper -->
+            <div id="page-title" class="wrapper align-center">
+                <span class="post-cat">
+                    <a href="{{ post.link }}">{{ post.terms('category') | join(', ') }}</a>
+                </span>
+                <div class="spacer-small"></div>
+                <div class="post-name">
+                    <h1>{{ post.title }}</h1>
+                </div>
+                <div class="post-meta">
+                    <span class="post-date">{{ post.date }}</span>
+                </div>
+                <br>
+                <div class="post-meta">
+                    <span class="post-author">Author:
+                        {{ post.author }}</span>
+                </div>
+            </div>
+            <!-- END #page-title -->
+
+        </section>
+        <!-- HERO -->
+
+        <!-- PAGEBODY -->
+        <section id="page-body">
+
+            <div id="blog-single">
+                <div class="blog-media">
+                    <img src="{{ post.thumbnail.src|resize(900, 600) }}" alt="blog post header">
+                </div>
+
+                <div class="blog-content wrapper-small">
+                    {{post.content}}
+                </div>
+
+                <div class="wrapper-small">
+                    <div class="spacer-big"></div>
+                    <div id="single-pagination" class="blog-pagination">
+                        {# <ul class="pagination">
+							<li class="prev"><a href="{{ function('previous_post_link') }}" data-title="{{ function('previous_post_title') }}"><span class="text">Previous Post</span>
+							<svg class="arrow arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35.35"><path d="M0,16.88a3,3,0,0,0,.16.94,1.51,1.51,0,0,0,.63.78l15,15a2.14,2.14,0,0,0,3.52.08,2.14,2.14,0,0,0-.08-3.52L8.59,19.38H57.5a2.5,2.5,0,1,0,0-5H8.59L19.22,3.59A2.14,2.14,0,0,0,19.3.08a2.14,2.14,0,0,0-3.52.08l-15,15a1.51,1.51,0,0,0-.62.78A3,3,0,0,0,0,16.88Z"></path></svg>
+							</a></li>
+						</ul> #}
+                        <div class="tool-pagination">
+                            {% if posts.pagination.prev %}
+                                <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
+                            {% endif %}
+                            <ul class="pagination">
+                                {% for page in posts.pagination.pages %}
+                                    <li class="prev">
+                                        {% if page.link %}
+                                            <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+                                        {% else %}
+                                            <span class="{{page.class}}">{{page.title}}</span>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% if posts.pagination.next %}
+                                <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="spacer-small"></div>
+
+                    {% if post.comment_status == "closed" %}
+                        <p>
+                            comments for this post are closed
+                        </p>
+                    {% else %}
+                        <!-- comment form -->
+                        {% include "comment-form.twig" %}
+                    {% endif %}
+
+                </div>
+                <!-- END .wrapper-small -->
+            </div>
+
+        </section>
+        <!-- PAGEBODY -->
+
+    </div>
+    <!-- HERO & BODY -->
 {% endblock %}
