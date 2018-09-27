@@ -149,12 +149,9 @@ class StarterSite extends Timber\Site
 }
 
 new StarterSite();
+
+
 // Case Studies
 Routes::map('case-studies/:name', function ($params) {
     $page = get_page_by_path($params['page']);
-    if ($page) {
-        Routes::load('page.php', $params, null, 200);
-    } else {
-        Routes::load('404.php', $params, null, 404);
-    }
 });
