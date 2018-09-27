@@ -122,17 +122,20 @@
                         <a class="inline-lightcase" data-rel="lightcase" href="https://www.youtube.com/embed/4TBd_A7lLH8"><img alt="Video embed" class="lazy" data-src="{{ site.theme.path }}/assets/uploads/inline-video-1.jpg" height="1148" width="2680"></a>
                     </div>
                 </div>
+                
                 <div class="spacer-big"></div>
                 <div class="spacer-big hidden-768"></div>
                 <div class="wrapper">
                     <h3 class="align-center">From our Blog</h3>
                     <div class="spacer-big"></div>
                     <div class="isotope-grid style-column-3 isotope-spaced-big" id="blog-grid">
-                        {% for post in blog_entry %}
+                        {% for post in latest %}
                             <div class="blog-item isotope-item">
                                 <div class="blog-item-inner item-inner">
                                     <div class="blog-media do-anim-modern">
-                                        <a class="thumb-hover scale" href="{{ post.link }}"><img alt="Blog post image" class="lazy" data-src="{{ post.thumbnail.src|resize(900, 1200) }}" height="900" width="1200"></a>
+                                        <a class="thumb-hover scale" href="{{ post.link }}">
+                                            <img alt="Blog post image" class="lazy" data-src="{{ post.thumbnail.src }}" height="900" width="1200">
+                                        </a>
                                     </div>
                                     <div class="blog-info">
                                         <div class="post-meta clearfix">
@@ -144,7 +147,7 @@
                                         <h3 class="post-name">
                                             <a href="{{ post.link }}">{{ post.title | slice(0, 45) ~ '...' }}</a>
                                         </h3>
-                                        <p>{{ post.preview | slice(0, 130) ~ '...' }}</p>
+                                        <p>{{ post.preview | slice(0, 250) ~ '...' }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -153,6 +156,7 @@
                     </div>
                     <div class="spacer-big"></div>
                     <div class="spacer-big hidden-768"></div>
+
                     <div class="fullwidth-section text-light" style="background: #000000;">
                         <div class="fullwidth-content wrapper-small align-center">
                             <h3 class="title-alt">Ready to start your Project?

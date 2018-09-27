@@ -2,6 +2,17 @@
 
     {% include 'html-header.twig' %}
     {% block head %}{% endblock %}
+    <!-- Hotjar Tracking Code for www.scopeweb.nyc -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:982954,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
 {% endblock %}
 
@@ -20,13 +31,15 @@
                 {% if post.slug == 'case-studies' %}
                     <div class="logo-left text-dark" id="logo">
                         <a href="{{ site.link }}">
-                            <img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-dark@2x.png 2x">
-                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
+                            <img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png">
+                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png">
+                        </a>
                     </div>
                 {% else %}
                     <div class="logo-left text-light" id="logo">
-                        <a href="{{ site.link }}"><img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-dark@2x.png 2x">
-                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
+                        <a href="{{ site.link }}"><img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png">
+                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png">
+                        </a>
                     </div>
                 {% endif %}
                 <div class="clearfix" id="menu">
@@ -107,5 +120,7 @@
     </footer>
     {{ function('wp_footer') }}
 {% endblock %}
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bad2d7d8419ba47"></script>
 </body>
 </html>
