@@ -2657,7 +2657,7 @@ div .blog-info:first-child {
 
 .blog-item .blog-info .post-name {
     margin-top: 15px;
-    font-size: 28px !important;
+    font-size:  28px !important;
 }
 
 .blog-item .blog-info .post-name + p {
@@ -5588,4 +5588,48 @@ header #logo img {
     position: absolute;
     bottom: 30px;
     margin-left: 25%;
+}
+
+.wpcf7-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+    margin-top: 20px;
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    display: none;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: center;
+    background: #38e394;
+    padding: 17px 0px;
+    border: none;
+    margin: 0;
+}
+
+.wpcf7-form .wpcf7-response-output.wpcf7-validation-errors {
+    position: fixed;
+    z-index: 10;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    display: none;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: center;
+    background: #fa4d5a;
+    margin-top: 20px;
+    padding: 17px 0px;
+    border: none;
+    margin: 0;
 }
