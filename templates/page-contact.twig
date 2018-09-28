@@ -67,46 +67,9 @@
                     </div>
 
                     <div class="column three-fourth last-col">
-                        <form id="contact-form" class="checkform sendemail" action="send.php" method="post">
-
-                            <div class="form-row">
-                                <label for="name">Name
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <input type="text" name="name" id="name" class="name req" value=""/>
-                            </div>
-
-                            <div class="form-row">
-                                <label for="email">Email
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <input type="text" name="email" id="email" class="email req" value=""/>
-                            </div>
-
-                            <div class="form-row">
-                                <label for="message">Message
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <textarea name="message" id="message" class="message req" rows="30" cols="50"></textarea>
-                            </div>
-
-                            <div class="form-row form-note">
-                                <div class="alert-error">
-                                    <p>Please check your entries!</p>
-                                </div>
-                            </div>
-
-                            <div class="form-row hidden">
-                                <input type="text" id="form-check" name="form-check" value="" class="form-check"/>
-                            </div>
-
-                            <div class="form-row">
-                                <input type="submit" name="submit" class="submit" value="Send Message"/>
-                            </div>
-
-                            <input type="hidden" name="subject" value="Contact Subject Noha HTML"/>
-                            <input type="hidden" name="fields" value="name,email,message"/>
-                        </form>
+                        {% filter shortcodes %}
+                            [contact-form-7 id="90" title="Contact form 1"]
+                        {% endfilter %}
                     </div>
                 </div>
 
