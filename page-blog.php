@@ -15,15 +15,29 @@
  * (in which case you'll want to duplicate this file and save to the above path)
  *
  * Methods for TimberHelper can be found in the /lib sub-directory
- *
- * @package  WordPress
- * @subpackage  Timber
- * @since    Timber 0.1
  */
 
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
+$context['featured'] = Timber::get_posts(
+    array(
+        'post_type' => array('post'),
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order' => 'ASC',
+    )
+);
 
-Timber::render('case-studies.twig', $context);
+$context['latest'] = Timber::get_posts(
+    array(
+        'post_type' => array('post'),
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+    )
+);
+
+
+Timber::render('page-blog.twig', $context);

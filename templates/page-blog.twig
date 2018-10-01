@@ -7,41 +7,19 @@
         <!-- HERO -->
         <section id="hero" class="hero-big">
             <div class="owl-slider hero-slider nav-light" data-autoplay="true" data-loop="true" data-dots="false">
-                <div class="slider-item text-light">
-                    <div class="bg-img" style="background-image:url('{{ site.theme.path }}/assets/uploads/blog-hero-full-3.jpg');"></div>
-                    <a href="blog-post.html" class="sr-button style-3 button-small read-more">Read More</a>
-                    <div class="owl-slider-caption bottom">
-                        <h5 class="title-alt">Web Development</h5>
-                        <div class="spacer-mini"></div>
-                        <h2>
-                            <strong>Winter Campaign by David Oliver</strong>
-                        </h2>
+                {% for post in featured %}
+                    <div class="slider-item text-light">
+                        <div class="bg-img" style="background-image:url('{{ post.thumbnail.src }}');"></div>
+                        <a href="{{ post.link }}" class="sr-button style-3 button-small read-more">Read More</a>
+                        <div class="owl-slider-caption bottom">
+                            <h5 class="title-alt">{{ post.terms('category') | join(', ') }}</h5>
+                            <div class="spacer-mini"></div>
+                            <h2>
+                                <strong>{{ post.title | slice(0, 45) ~ '...' }}</strong>
+                            </h2>
+                        </div>
                     </div>
-                </div>
-
-                <div class="slider-item text-light">
-                    <div class="bg-img" style="background-image:url({{ site.theme.path }}/assets/uploads/blog-hero-full-2.jpg);"></div>
-                    <a href="blog-post.html" class="sr-button style-3 button-small read-more">Read More</a>
-                    <div class="owl-slider-caption bottom">
-                        <h5 class="title-alt">Design</h5>
-                        <div class="spacer-mini"></div>
-                        <h2>
-                            <strong>Start your day with a new recipe</strong>
-                        </h2>
-                    </div>
-                </div>
-
-                <div class="slider-item text-light">
-                    <div class="bg-img" style="background-image:url({{ site.theme.path }}/assets/uploads/blog-hero-full-1.jpg);"></div>
-                    <a href="blog-post.html" class="sr-button style-3 button-small read-more">Read More</a>
-                    <div class="owl-slider-caption bottom">
-                        <h5 class="title-alt">Concepting</h5>
-                        <div class="spacer-mini"></div>
-                        <h2>
-                            <strong>Intervie with Jhon Malcomich</strong>
-                        </h2>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <!-- END .owl-slider -->
         </section>
@@ -49,7 +27,6 @@
 
         <!-- PAGEBODY -->
         <section id="page-body">
-
             <div class="spacer-medium"></div>
 
             <div id="blog-grid" class="isotope-grid style-column-3 isotope-spaced-big">
