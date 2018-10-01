@@ -30,200 +30,42 @@
             <div class="spacer-medium"></div>
 
             <div id="blog-grid" class="isotope-grid style-column-3 isotope-spaced-big">
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-4.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">May 8, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Web Development</a>
-                                </span>
+                {% for post in featured %}
+                    <div class="blog-item isotope-item">
+                        <div class="blog-item-inner item-inner do-anim">
+                            <div class="blog-media">
+                                <a href="blog-post.html" class="thumb-hover scale">
+                                    <img src="{{ post.thumbnail.src }}" alt="SEO"/>
+                                </a>
                             </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">The Modern Man</a>
-                            </h3>
-                            <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone ...</p>
+
+                            <div class="blog-info">
+                                <div class="post-meta clearfix">
+                                    <span class="post-date">May 8, 2018</span>
+                                    <span class="post-cat">
+                                        <a href="#">Web Development</a>
+                                    </span>
+                                </div>
+                                <h3 class="post-name">
+                                    <a href="blog-post.html">The Modern Man</a>
+                                </h3>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone ...</p>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-equal-1.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">May 6, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Design</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">What should I eat for Breakfast</a>
-                            </h3>
-                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his ...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-6.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">May 1, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Web Development</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">Paris Web Development Week 2018</a>
-                            </h3>
-                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that ...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-5.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">May 1, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Web Development</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-single-split1.html">Product Development Collection by Thomas Day</a>
-                            </h3>
-                            <p>And that’s already freaky enough. Now, Eventide the folks you know probably for their classic ...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-7.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">April 27, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Concepting</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">Fachwerkhaus</a>
-                            </h3>
-                            <p>A collection of textile samples lay spread out on the table - Samsa was a Conceptingling salesman - and above it there hung ...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-8.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">April 26, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Product Development</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">Blue Waves Ocean Crash</a>
-                            </h3>
-                            <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-equal-3.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">April 21, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Technology</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">What is responsive Web Design</a>
-                            </h3>
-                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that ...</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-item isotope-item">
-                    <div class="blog-item-inner item-inner do-anim">
-                        <div class="blog-media">
-                            <a href="blog-post.html" class="thumb-hover scale">
-                                <img src="{{ site.theme.path }}/assets/uploads/blog-thumb-masonry-11.jpg" alt="SEO"/>
-                            </a>
-                        </div>
-
-                        <div class="blog-info">
-                            <div class="post-meta clearfix">
-                                <span class="post-date">April 16, 2018</span>
-                                <span class="post-cat">
-                                    <a href="#">Web Development</a>
-                                </span>
-                            </div>
-                            <h3 class="post-name">
-                                <a href="blog-post.html">The new Store by Geeks</a>
-                            </h3>
-                            <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone ...</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <!-- END grid -->
-
-            <div class="spacer-medium"></div>
-
-        </section>
-        <!-- PAGEBODY -->
-
+        </div>
     </div>
-    <!-- HERO & BODY -->
+    <!-- END grid -->
+
+    <div class="spacer-medium"></div>
+
+</section>
+<!-- PAGEBODY -->
+
+</div>
+<!-- HERO & BODY -->
 
 {% endblock %}
