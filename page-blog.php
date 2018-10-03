@@ -34,6 +34,14 @@ $context['latest'] = Timber::get_posts(
     array(
         'post_type' => array('post'),
         'post_status' => 'publish',
+        'posts_per_page' => 3
+    )
+);
+
+$context['recent'] = Timber::get_posts(
+    array(
+        'post_type' => array('post'),
+        'post_status' => 'publish'
     )
 );
 
