@@ -25,5 +25,12 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+$context['latest'] = Timber::get_posts(
+    array(
+        'post_type' => array('post'),
+        'post_status' => 'publish',
+        'posts_per_page' => 3
+    )
+);
 
+Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
