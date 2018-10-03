@@ -71,7 +71,17 @@
                     </li>
                 </ul>
             </div>
-            {# {% include 'mailchimp.twig' %} #}
+            <div class="widget">
+                <h5 class="widget-title title-alt">
+                    <strong>Latest Posts</strong>
+                </h5>
+                <ul class="menu">
+                {% for post in latest %}
+                    <li>
+                        <a href="{{ post.link }}">{{ post.title | slice(0, 55) ~ '...' }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
