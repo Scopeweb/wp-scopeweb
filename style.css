@@ -139,15 +139,19 @@ html {
 }
 
 body {
-    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 28px;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
     position: relative;
     background: #ffffff;
     min-height: 100%;
+}
+
+p {
+    font-size: 20px;
 }
 
 .text-light {
@@ -188,7 +192,7 @@ body {
 ---------------------------------------- */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
@@ -348,7 +352,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], textarea {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     background: transparent;
@@ -389,7 +393,7 @@ textarea {
 input[type=submit], input[type=button], .button, button {
     cursor: pointer;
     display: inline-block;
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
@@ -755,7 +759,7 @@ i, dfn, em {
 }
 
 blockquote {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
@@ -818,7 +822,7 @@ blockquote cite {
     display: block;
     font-size: 16px;
     line-height: 24px;
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     letter-spacing: 0em;
     font-style: normal;
@@ -1999,7 +2003,7 @@ header.menu-is-open nav#main-nav > ul > li:nth-child(8) {
 }
 
 nav#main-nav ul > li > a {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 24px;
     display: inline-block;
@@ -2605,7 +2609,7 @@ header.header-right.action-is-active ~ #hero-and-body #hero[class*='side-left'].
 
 ------------------------------------------------*/
 .portfolio-category {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     letter-spacing: 0.03em;
     line-height: 1.5em;
@@ -2636,7 +2640,7 @@ header.header-right.action-is-active ~ #hero-and-body #hero[class*='side-left'].
 
 ------------------------------------------------*/
 .post-date {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.35);
@@ -2647,7 +2651,7 @@ header.header-right.action-is-active ~ #hero-and-body #hero[class*='side-left'].
 }
 
 .post-cat {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 400;
     float: right;
@@ -3125,7 +3129,7 @@ div[class*='spacer-'] + #single-pagination, div[class*='spacer-'] + #page-pagina
 }
 
 .pagination li a {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #000000;
@@ -3183,7 +3187,7 @@ div[class*='spacer-'] + #single-pagination, div[class*='spacer-'] + #page-pagina
 
 .pagination li a[data-title]::before {
     content: attr(data-title);
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
@@ -3221,7 +3225,7 @@ div[class*='spacer-'] + #single-pagination, div[class*='spacer-'] + #page-pagina
 }
 
 #page-pagination .pagination li.page span, #page-pagination .pagination li.page a {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: #000000;
@@ -3843,7 +3847,7 @@ div .isotope-grid:first-child {
 
 /* Slider caption */
 .tp-caption.scopeweb-caption {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #000000;
 }
@@ -4494,9 +4498,9 @@ div .column-section:first-child, .fullwidth-section + .column-section {
 /*	Buttons
 -------------------------------------------------*/
 .sr-button {
-    font-family: 'Poppins';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
     text-align: center;
     background: #000000;

@@ -5,9 +5,9 @@
     <div id="hero-and-body">
 
         <!-- HERO -->
-        <section id="hero" class="hero-big" style="background: url({{ site.theme.path }}/assets/uploads/about-1.jpg); background-size: cover; background-position: center center;">
+        <section id="hero" class="hero-big" style="background: url({{TimberImage(post.get_field('about_header_image')).src}}); background-size: cover; background-position: center center;">
             <div id="page-title" class="wrapper">
-                <h1 class="h2">We are a full service agency<br>based in New York City</h1>
+                <h1 class="h2" style="font-weight:300;">{{post.get_field('about_top_title')}}</h1>
             </div>
         </section>
         <!-- HERO -->
@@ -22,13 +22,15 @@
                 <div class="column-section clearfix">
                     <div class="column one-fourth">
                         <h5 class="title-alt">
-                            <strong>History</strong>
+                            <strong>{{post.get_field('about_sub_title_1')}}</strong>
                         </h5>
                     </div>
                     <div class="column three-fourth last-col">
-                        <h4>Since 2016, clients have trusted us to redefine their businesses through mobile innovation. Our integrated process of strategy, design, and engineering has a proven record of delivering unique products with a level of beauty and precision unrivaled in our industry.</h4>
+                        <h4>{{post.get_field('about_paragraph_1')}}</h4>
                         <div class="spacer-medium"></div>
-                        <h4>Our collaborative approach to problem-solving leverages years of experience bringing digital products to market. Whether you want to build the next ground-breaking mobile app, wearable, or hardware product, we provide a full range of strategy, design, and development services to get the job done.</h4>
+                        <h4>{{post.get_field('about_paragraph_2')}}</h4>
+                        <div class="spacer-medium hidden-768"></div>
+                        <h4 class="hidden-768">{{post.get_field('about_paragraph_3')}}</h4>
                     </div>
                 </div>
                 <!-- END .column-section -->
@@ -38,28 +40,28 @@
                 <div class="column-section clearfix">
                     <div class="column one-fourth">
                         <h5 class="title-alt">
-                            <strong>Services</strong>
+                            <strong>{{post.get_field('about_sub_title_2')}}</strong>
                         </h5>
                     </div>
                     <div class="column one-fourth">
                         <ul class="nolist biglist">
-                            <li>Branding &amp; Identity</li>
-                            <li>Web Design</li>
-                            <li>Web Development</li>
+                            <li>{{post.get_field('about_col1_service_1')}}</li>
+                            <li>{{post.get_field('about_col1_service_2')}}</li>
+                            <li>{{post.get_field('about_col1_service_3')}}</li>
                         </ul>
                     </div>
                     <div class="column one-fourth">
                         <ul class="nolist biglist">
-                            <li>Digital Advertising</li>
-                            <li>UX Design</li>
-                            <li>SEO</li>
+                            <li>{{post.get_field('about_col2_service_1')}}</li>
+                            <li>{{post.get_field('about_col2_service_2')}}</li>
+                            <li>{{post.get_field('about_col2_service_3')}}</li>
                         </ul>
                     </div>
                     <div class="column one-fourth last-col">
                         <ul class="nolist biglist">
-                            <li>Creative Direction</li>
+                            <li>{{post.get_field('about_col3_service_1')}}</li>
                             <li>Social Media</li>
-                            <li>Web Consulting</li>
+                            <li>{{post.get_field('about_col3_service_3')}}</li>
                         </ul>
                     </div>
                 </div>
@@ -73,11 +75,11 @@
             <!-- The fullwidth section is only needed for the logo color switch -->
             <div class="fullwidth-section text-light" style="background: #000000;">
                 <div class="fullwidth-content wrapper-big align-center">
-                    <h3>We work with brands we believe in.</h3>
+                    <h3>{{post.get_field('about_brands_title')}}</h3>
                     <div class="spacer-big"></div>
-                    <p class="do-anim"><img src="{{ site.theme.path }}/assets/uploads/example-logos-big.png" alt="brand logos"></p>
+                    <p class="do-anim"><img src="{{TimberImage(post.get_field('about_brands_1')).src}}" alt="brand logos"></p>
                     <div class="spacer-big"></div>
-                    <p class="do-anim"><img src="{{ site.theme.path }}/assets/uploads/example-logos-big-2.png" alt="brand logos"></p>
+                    <p class="do-anim"><img src="{{TimberImage(post.get_field('about_brands_2')).src}}" alt="brand logos"></p>
                 </div>
             </div>
 

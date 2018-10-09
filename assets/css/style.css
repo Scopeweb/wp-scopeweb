@@ -199,7 +199,7 @@ html {
 }
 
 body {
-    font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 15px;
     line-height: 28px;
@@ -261,7 +261,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 300
 }
 
@@ -504,7 +504,7 @@ input[type=password],
 input[type=tel],
 input[type=text],
 textarea {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     background: 0 0;
@@ -556,7 +556,7 @@ input[type=button],
 input[type=submit] {
     cursor: pointer;
     display: inline-block;
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
@@ -924,7 +924,7 @@ strong {
 blockquote,
 blockquote cite {
     font-weight: 300;
-    font-family: Poppins
+    font-family: 'Roboto', sans-serif;
 }
 
 blockquote {
@@ -2152,7 +2152,7 @@ header.menu-is-open nav#main-nav>ul>li:nth-child(8) {
 }
 
 nav#main-nav ul>li>a {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 300;
     font-size: 24px;
     display: inline-block;
@@ -2699,7 +2699,7 @@ header.header-right.menu-is-open~#hero-and-body #hero[class*=side-left].is_stuck
 }
 
 .portfolio-category {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 300;
     letter-spacing: .03em;
     line-height: 1.5em;
@@ -2725,7 +2725,7 @@ header.header-right.menu-is-open~#hero-and-body #hero[class*=side-left].is_stuck
 }
 
 .post-date {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-size: 13px;
     font-weight: 300;
     color: rgba(0, 0, 0, .35)
@@ -2736,7 +2736,7 @@ header.header-right.menu-is-open~#hero-and-body #hero[class*=side-left].is_stuck
 }
 
 .post-cat {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-size: 13px;
     font-weight: 400;
     float: right;
@@ -3184,7 +3184,7 @@ div[class*=spacer-]+#single-pagination {
 }
 
 .pagination li a {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 400;
     font-size: 14px;
     color: #000;
@@ -3243,7 +3243,7 @@ div[class*=spacer-]+#single-pagination {
 
 .pagination li a[data-title]::before {
     content: attr(data-title);
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 400;
     font-size: 18px;
     color: #000;
@@ -3287,7 +3287,7 @@ div[class*=spacer-]+#single-pagination {
 
 #page-pagination .pagination li.page a,
 #page-pagination .pagination li.page span {
-    font-family: Poppins;
+    font-family: 'Roboto', sans-serif;;
     font-weight: 400;
     font-size: 13px;
     color: #000;
@@ -3741,7 +3741,7 @@ div .isotope-grid:first-child {
 
 .sr-button,
 .tp-caption.scopeweb-caption {
-    font-family: Poppins
+    font-family: 'Roboto', sans-serif;
 }
 
 .phatvideo-bg .playpause-video span::before {
