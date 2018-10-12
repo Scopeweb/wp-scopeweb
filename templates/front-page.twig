@@ -159,7 +159,7 @@
                                             </span>
                                         </div>
                                         <h3 class="post-name">
-                                            <a href="{{ post.link }}">{{ post.title|length > 35 ? post.title|slice(0, 35)|raw ~ '...' : post.title|raw }}</a>
+                                            <a href="{{ post.link }}" title="{{ post.title }}">{{ post.title|length > 35 ? post.title|slice(0, 35)|raw ~ '...' : post.title|raw }}</a>
                                         </h3>
                                         <p>{{ post.preview|length > 200 ? post.preview|slice(0, 200)|raw ~ '...' : post.preview|raw }}</p>
                                         </div>
