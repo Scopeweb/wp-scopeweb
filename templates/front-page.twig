@@ -159,9 +159,9 @@
                                             </span>
                                         </div>
                                         <h3 class="post-name">
-                                            <a href="{{ post.link }}">{{ post.title|slice(0, 35) ~ '...' }}</a>
+                                            <a href="{{ post.link }}">{{ post.title|length > 35 ? post.title|slice(0, 35)|raw ~ '...' : post.title|raw }}</a>
                                         </h3>
-                                        <p>{{ post.preview|slice(0, 250) ~ '...' }}</p>
+                                        <p>{{ post.preview|length > 200 ? post.preview|slice(0, 200)|raw ~ '...' : post.preview|raw }}</p>
                                         </div>
                                     </div>
                                 </div>
