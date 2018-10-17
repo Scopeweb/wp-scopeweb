@@ -159,3 +159,6 @@ Routes::map('case-studies/', function ($params) {
 Routes::map('case-studies/:name', function ($params) {
     $page = get_page_by_path($params['page']);
 });
+
+// Filter for Download Monitor shortcodes
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
