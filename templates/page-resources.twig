@@ -25,7 +25,13 @@
 
                 <div class="column-section clearfix">
                     <div class="column one-third">
-                        {{post.content}}
+                        {{post.get_field('download_1')}}
+                    </div>
+                    <div class="column one-third">
+                        {{post.get_field('download_2')}}
+                    </div>
+                    <div class="column one-third">
+                        {{post.get_field('download_3')}}
                     </div>
                 </div>
             </div>
