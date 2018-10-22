@@ -25,14 +25,13 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
-$blog_entry = Timber::get_posts(
+$context['latest'] = Timber::get_posts(
     array(
         'post_type' => array('post'),
         'post_status' => 'publish',
-        'posts_per_page' => 3,
+        'posts_per_page' => 3
     )
 );
 
-$context['blog_entry'] = $blog_entry;
 
 Timber::render('front-page.twig', $context);

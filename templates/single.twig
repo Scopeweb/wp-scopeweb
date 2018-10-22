@@ -1,6 +1,18 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    <style>
+    @media only screen and (min-width:655px){
+        input[type=text],[type=email]{
+            width: 45% !important;
+        }
+    }
+    @media only screen and (max-width:654px){
+        input[type=text],[type=email] {
+            width: 100% !important;
+        }
+    }
+    </style>
     <!-- HERO & BODY -->
     <div id="hero-and-body">
 
@@ -39,55 +51,47 @@
 
                 <div class="blog-content wrapper-small">
                     {{post.content}}
+                    <div class="spacer-small"></div>
+                    <div class="addthis_inline_share_toolbox"></div>
                 </div>
 
                 <div class="wrapper-small">
                     <div class="spacer-big"></div>
-                    <div id="single-pagination" class="blog-pagination">
-                        {# <ul class="pagination">
-							<li class="prev"><a href="{{ function('previous_post_link') }}" data-title="{{ function('previous_post_title') }}"><span class="text">Previous Post</span>
-							<svg class="arrow arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35.35"><path d="M0,16.88a3,3,0,0,0,.16.94,1.51,1.51,0,0,0,.63.78l15,15a2.14,2.14,0,0,0,3.52.08,2.14,2.14,0,0,0-.08-3.52L8.59,19.38H57.5a2.5,2.5,0,1,0,0-5H8.59L19.22,3.59A2.14,2.14,0,0,0,19.3.08a2.14,2.14,0,0,0-3.52.08l-15,15a1.51,1.51,0,0,0-.62.78A3,3,0,0,0,0,16.88Z"></path></svg>
-							</a></li>
-						</ul> #}
-                        <div class="tool-pagination">
-                            {% if posts.pagination.prev %}
-                                <a href="{{posts.pagination.prev.link}}" class="prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Prev</a>
-                            {% endif %}
-                            <ul class="pagination">
-                                {% for page in posts.pagination.pages %}
-                                    <li class="prev">
-                                        {% if page.link %}
-                                            <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
-                                        {% else %}
-                                            <span class="{{page.class}}">{{page.title}}</span>
-                                        {% endif %}
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                            {% if posts.pagination.next %}
-                                <a href="{{posts.pagination.next.link}}" class="next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Next</a>
-                            {% endif %}
+
+                    <div class="column-section clearfix">
+                        <div class="column one-full">
+                            <!-- Begin Mailchimp Signup Form -->
+                            <div id="mailchimp">
+                                <form action="https://nyc.us19.list-manage.com/subscribe/post?u=5b30200a7171ca08bf6501ce7&amp;id=a528350254" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+                                    <div id="mc_embed_signup_scroll">
+                                        <h2 style="color:#ff5f5f !important;font-weight:700;">👊 Sharing is caring</h2>
+                                        <h5 class="title-alt" style="margin-bottom: 10px;">Once a month, the best tips to grow your online business.</h5>
+                                        <input type="text" size="30" value="Enter your name" name="FNAME" class="required email" id="mce-FNAME" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                                        <input class="required email" id="mce-EMAIL" name="EMAIL" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" size="30" type="email" value="Enter your email">
+                                        <div class="clear" id="mce-responses">
+                                            <div class="response" id="mce-error-response" style="display:none"></div>
+                                            <div class="response" id="mce-success-response" style="display:none"></div>
+                                        </div>
+                                        <div class="clear">
+                                            <input class="button" id="mc-embedded-subscribe" name="subscribe" style="margin-top: 15px;" type="submit" value="Make me smart">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!--End mc_embed_signup-->
                         </div>
                     </div>
 
-                    <div class="spacer-small"></div>
-
-                    {% if post.comment_status == "closed" %}
-                        <p>
-                            comments for this post are closed
-                        </p>
-                    {% else %}
-                        <!-- comment form -->
-                        {% include "comment-form.twig" %}
-                    {% endif %}
-
+                    <div class="spacer-big"></div>
+                    <div class="spacer-big"></div>
                 </div>
                 <!-- END .wrapper-small -->
             </div>
+            <div class="spacer-small"></div>
 
         </section>
         <!-- PAGEBODY -->
 
     </div>
     <!-- HERO & BODY -->
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bad2d7d8419ba47"></script>
 {% endblock %}

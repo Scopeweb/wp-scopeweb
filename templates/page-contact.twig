@@ -7,14 +7,35 @@
         <!-- HERO -->
         <section id="hero" class="hero-auto">
             <div id="page-title" class="wrapper">
-                <h1 class="h2">We would love to hear from you</h1>
-                <h3 class="mt-50">We put all the experience and know-how in this product so we can offer you the best product we have ever built.</h3>
+                <h1 class="h2">Touch base with us</h1>
+                <h3 class="mt-50">Forgive us if we don’t pick up. We are often heads down jamming on something that we can’t wait to share. We'll talk real soon. In the meantime, peep our social wall to see what we're up to.</h3>
+                <div class="spacer-small"></div>
+                <div class="addthis_inline_follow_toolbox"></div>
             </div>
         </section>
         <!-- HERO -->
 
         <!-- PAGEBODY -->
         <section id="page-body">
+            <div class="wrapper">
+                <div class="column-section clearfix">
+                    <div class="column one-fourth">
+                        <h5 class="title-alt">
+                            <strong>Our Offices</strong>
+                        </h5>
+                    </div>
+                    <div class="column one-fourth">
+                        <h4>New York City</h4>
+                        <p>3333 Broadway<br>Ny 10013 New York City<br>+1 570 580 7737</p>
+                    </div>
+                    <div class="column one-fourth">
+                        <h4>Rotterdam</h4>
+                        <p>Weena 290<br>3012 NJ Rotterdam<br>+31 685 661 069</p>
+                    </div>
+                </div>
+
+                <div class="spacer-big"></div>
+            </div>
 
             <div id="map1" class="google-map" style="height:400px;">
                 <div class="mapouter">
@@ -43,70 +64,14 @@
                 <div class="column-section clearfix">
                     <div class="column one-fourth">
                         <h5 class="title-alt">
-                            <strong>Our Offices</strong>
-                        </h5>
-                    </div>
-                    <div class="column one-fourth">
-                        <h4>New York City</h4>
-                        <p>3333 Broadway<br>Ny 10013 New York City<br>+1 570 580 7737</p>
-                    </div>
-                    <div class="column one-fourth">
-                        <h4>Rotterdam</h4>
-                        <p>Weena 290<br>3012 NJ Rotterdam<br>+31 685 661 069</p>
-                    </div>
-                </div>
-                <!-- END .column-section -->
-
-                <div class="spacer-big"></div>
-
-                <div class="column-section clearfix">
-                    <div class="column one-fourth">
-                        <h5 class="title-alt">
                             <strong>Write Us</strong>
                         </h5>
                     </div>
 
                     <div class="column three-fourth last-col">
-                        <form id="contact-form" class="checkform sendemail" action="send.php" method="post">
-
-                            <div class="form-row">
-                                <label for="name">Name
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <input type="text" name="name" id="name" class="name req" value=""/>
-                            </div>
-
-                            <div class="form-row">
-                                <label for="email">Email
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <input type="text" name="email" id="email" class="email req" value=""/>
-                            </div>
-
-                            <div class="form-row">
-                                <label for="message">Message
-                                    <abbr title="required" class="required">*</abbr>
-                                </label>
-                                <textarea name="message" id="message" class="message req" rows="30" cols="50"></textarea>
-                            </div>
-
-                            <div class="form-row form-note">
-                                <div class="alert-error">
-                                    <p>Please check your entries!</p>
-                                </div>
-                            </div>
-
-                            <div class="form-row hidden">
-                                <input type="text" id="form-check" name="form-check" value="" class="form-check"/>
-                            </div>
-
-                            <div class="form-row">
-                                <input type="submit" name="submit" class="submit" value="Send Message"/>
-                            </div>
-
-                            <input type="hidden" name="subject" value="Contact Subject Noha HTML"/>
-                            <input type="hidden" name="fields" value="name,email,message"/>
-                        </form>
+                        {% filter shortcodes %}
+                            [contact-form-7 id="90" title="Contact form 1"]
+                        {% endfilter %}
                     </div>
                 </div>
 
@@ -120,4 +85,5 @@
 
     </div>
     <!-- HERO & BODY -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bad2d7d8419ba47"></script>
 {% endblock %}

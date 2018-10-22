@@ -1,7 +1,6 @@
 {% block html_head_container %}
 
     {% include 'html-header.twig' %}
-    {% block head %}{% endblock %}
 </head>
 {% endblock %}
 
@@ -11,22 +10,25 @@
     <span class="loader-icon bullets-jump">
         <span></span>
         <span></span>
-        <span></span></span>
+        <span></span>
+    </span>
 </div>
 <div id="page-content">
     <header class="header-left" id="header">
         {% block header %}
             <div class="header-inner clearfix">
-                {% if post.slug == 'case-studies' %}
+                {% if post.slug == 'case-studies' | function('get_post_type', post.ID) == false %}
                     <div class="logo-left text-dark" id="logo">
                         <a href="{{ site.link }}">
-                            <img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-dark@2x.png 2x">
-                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
+                            <img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png">
+                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png">
+                        </a>
                     </div>
                 {% else %}
                     <div class="logo-left text-light" id="logo">
-                        <a href="{{ site.link }}"><img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-dark@2x.png 2x">
-                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png" srcset="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png 1x, {{ site.theme.path }}/assets/uploads/logo-scopeweb-light@2x.png 2x"></a>
+                        <a href="{{ site.link }}"><img alt="Logo Dark" id="dark-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-dark.png">
+                            <img alt="Logo Light" id="light-logo" src="{{ site.theme.path }}/assets/uploads/logo-scopeweb-light.png">
+                        </a>
                     </div>
                 {% endif %}
                 <div class="clearfix" id="menu">
@@ -107,5 +109,7 @@
     </footer>
     {{ function('wp_footer') }}
 {% endblock %}
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bad2d7d8419ba47"></script>
 </body>
 </html>
