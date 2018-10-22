@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <!-- HERO & BODY -->
+    <div id="hero-and-body">
+
+        <!-- HERO -->
+        <section id="hero" class="hero-small">
+            <div id="page-title" class="wrapper">
+                <h1 class="h2">Resources! Sharing is caring.</h1>
+                <h5 class="title-alt">Work smarter, not harder. Use our resources to grow your business.</h5>
+                <p>
+                    We create content, free to download, with plenty of actionable advice for entrepreneurs who want to build products that people love.
+                </p>
+            </div>
+        </section>
+        <!-- HERO -->
+
+        <!-- PAGEBODY -->
+        <section id="page-body">
+
+            <section id="page-body">
+
+            <div class="wrapper">
+
+                <div class="column-section clearfix">
+                    <div class="column one-third">
+                        {{post.get_field('download_1')}}
+                    </div>
+                    <div class="column one-third">
+                        {{post.get_field('download_2')}}
+                    </div>
+                    <div class="column one-third">
+                        {{post.get_field('download_3')}}
+                    </div>
+                </div>
+
+                <div class="spacer-big"></div>
+                <div class="addthis_inline_share_toolbox"></div>
+
+
+            </div>
+
+
+            <div class="spacer-big"></div>
+
+        </section>
+        <!-- PAGEBODY -->
+
+    </div>
+    <!-- HERO & BODY -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bad2d7d8419ba47"></script>
+{% endblock %}
